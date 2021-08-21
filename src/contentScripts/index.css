@@ -1,0 +1,8 @@
+.raise-hand-button button {
+  transition: transform 0.5s ease 0s;
+}
+.raise-hand-button--raised button {
+  transform: scale(2) translate(0px, -20px);
+  z-index: 1;
+  background-color: rgb(111, 189, 111) !important;
+}
