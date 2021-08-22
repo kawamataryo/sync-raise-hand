@@ -9,7 +9,10 @@ Powerd by [Handtrackjs](https://github.com/victordibia/handtrack.js/) and [vites
 - ✋ Your real raised hand will be synchronized with the action of the raise button in Google Meet.
 - 🔐 All processing is done within the browser. No image data will be sent to the any server.
 
-https://user-images.githubusercontent.com/11070996/130357212-fa021e55-c74d-4691-844c-8b0ef8b4026e.mp4
+
+
+https://user-images.githubusercontent.com/11070996/130373307-91437e62-5845-4707-8551-bc3c02c7e717.mp4
+
 
 
 
