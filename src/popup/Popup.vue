@@ -1,7 +1,7 @@
 <template>
   <main class="w-[140px] px-2 py-3 text-center text-gray-700">
     <div class="font-bold justify-center flex">
-      Hand tracking <span class="text-base ml-1"><ph-hand /></span>
+      Hand tracking ✋
     </div>
     <div class="mt-2">
       <ToggleButton :model-value="checked" @update:modelValue="changeTrackStatus" />

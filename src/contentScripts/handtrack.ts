@@ -6,7 +6,7 @@ let timerID: any = null
 let videoEl: HTMLVideoElement | null = null
 let isRaiseHand = false
 
-const defaultParams = {
+const OPTIONS = {
   flipHorizontal: false,
   outputStride: 16,
   imageScaleFactor: 1,
@@ -20,14 +20,14 @@ const raiseButtonRaisedClass = 'raise-hand-button--raised'
 const raiseButtonClass = 'raise-hand-button'
 
 export const initialize = async() => {
-  model = await handTrack.load(defaultParams)
+  model = await handTrack.load(OPTIONS)
   videoEl = document.createElement('video')
 }
 
 const toggleRiseHandButton = (predictions: { label: string }[]) => {
   // Google's html class name is about to change, so I'm referring to the button from icon.
   const raiseHandButton = document.querySelector<HTMLElement>(RAISE_HAND_ICON_SELECTOR)?.closest('button')
-  raiseHandButton?.closest('div')?.classList.add(raiseButtonClass)
+  raiseHandButton?.closest('span')?.classList.add(raiseButtonClass)
 
   if (predictions.some((p: any) => p.label === 'open')) {
     if (!isRaiseHand) {

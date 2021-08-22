@@ -13,7 +13,7 @@ export async function getManifest(): Promise<Manifest.WebExtensionManifest> {
     version: pkg.version,
     description: pkg.description,
     browser_action: {
-      default_icon: './assets/icon.png',
+      default_icon: './assets/icon-48.png',
       default_popup: './dist/popup/index.html',
     },
     content_scripts: [
@@ -24,15 +24,13 @@ export async function getManifest(): Promise<Manifest.WebExtensionManifest> {
       },
     ],
     icons: {
+      19: './assets/icon-19.png',
       48: './assets/icon-48.png',
       128: './assets/icon.png',
     },
     permissions: [
       'tabs',
       'activeTab',
-      'videoCapture',
-      'http://meet.google.com/*',
-      'https://meet.google.com/*',
     ],
     // this is required on dev for Vite script to load
     content_security_policy: isDev

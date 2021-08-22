@@ -9,5 +9,7 @@ Powerd by [Handtrackjs](https://github.com/victordibia/handtrack.js/) and [vites
 - ✋ When you raise your hand in real life, the meet's raise button will also be pressed.
 - 🔐 All processing is done within the browser. No image data will be sent to the any server.
 
-## Get started
+## Install
+
+[Download in Chrome Web Store]()
 
