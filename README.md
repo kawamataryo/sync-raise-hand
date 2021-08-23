@@ -3,13 +3,12 @@
 
 ## Feature
 
-This is a Chrome extension that allows you to control the Raise button with real hand movements.
-Powerd by [Handtrackjs](https://github.com/victordibia/handtrack.js/) and [vitesse-webext](https://github.com/antfu/vitesse-webext).
-
 - ✋ Your real raised hand will be synchronized with the action of the raise button in Google Meet.
 - 🔐 All processing is done within the browser. No image data will be sent to the any server.
 
+Powerd by [Handtrackjs](https://github.com/victordibia/handtrack.js/) and [vitesse-webext](https://github.com/antfu/vitesse-webext).
 
+## Demo
 
 https://user-images.githubusercontent.com/11070996/130373307-91437e62-5845-4707-8551-bc3c02c7e717.mp4
 
