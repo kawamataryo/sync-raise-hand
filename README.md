@@ -18,5 +18,7 @@ https://user-images.githubusercontent.com/11070996/130373307-91437e62-5845-4707-
 
 ## Install
 
+**⏳ Waiting for store review.**  
+
 [Download in Chrome Web Store]()
 
