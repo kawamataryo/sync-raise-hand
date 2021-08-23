@@ -21,6 +21,7 @@ export async function getManifest(): Promise<Manifest.WebExtensionManifest> {
         matches: ['http://meet.google.com/*', 'https://meet.google.com/*'],
         js: ['./dist/contentScripts/index.global.js'],
         css: ['./dist/contentScripts/index.global.css'],
+        all_frames: true,
       },
     ],
     icons: {
@@ -28,10 +29,7 @@ export async function getManifest(): Promise<Manifest.WebExtensionManifest> {
       48: './assets/icon-48.png',
       128: './assets/icon.png',
     },
-    permissions: [
-      'tabs',
-      'activeTab',
-    ],
+    permissions: [],
     // this is required on dev for Vite script to load
     content_security_policy: isDev
       ? `script-src \'self\' http://localhost:${port}; object-src \'self\'`

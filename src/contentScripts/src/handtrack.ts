@@ -1,5 +1,5 @@
 import * as handTrack from 'handtrackjs'
-import { RAISE_HAND_ICON_SELECTOR } from '~/utils/constants'
+import { getRaiseHandButton } from '~/contentScripts/src/utils'
 
 let model: any = null
 let timerID: any = null
@@ -25,8 +25,7 @@ export const initialize = async() => {
 }
 
 const toggleRiseHandButton = (predictions: { label: string }[]) => {
-  // Google's html class name is about to change, so I'm referring to the button from icon.
-  const raiseHandButton = document.querySelector<HTMLElement>(RAISE_HAND_ICON_SELECTOR)?.closest('button')
+  const raiseHandButton = getRaiseHandButton()
   raiseHandButton?.closest('span')?.classList.add(raiseButtonClass)
 
   if (predictions.some((p: any) => p.label === 'open')) {

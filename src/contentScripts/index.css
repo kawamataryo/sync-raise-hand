@@ -4,5 +4,130 @@
 .raise-hand-button--raised button {
   transform: scale(2) translate(0px, -20px);
   z-index: 1;
-  background-color: rgb(111, 189, 111) !important;
+  background-color: #2196f3 !important;
+}
+
+#sync-raise-a-hand__controller {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  background-color: #3c4043;
+  border-radius: 0.5px;
+  box-shadow: 0 7px 18px rgba(0,0,0,0.2);
+  display: grid;
+  z-index: 1000;
+  height: auto;
+  align-items: center;
+  width: auto;
+  color: #fff;
+  font-size: 14px;
+  grid-template-columns: 132px auto;
+  padding: 10px 15px;
+}
+
+
+.sync-raise-a-hand__controller__switch-wrapper {
+  position: relative;
+  width: 46px;
+  height: 22px;
+}
+
+.sync-raise-a-hand__controller__switch {
+  position: absolute;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.sync-raise-a-hand__controller__switch > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: -1;
+  position: absolute;
+  right: 6px;
+  top: -8px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+}
+
+.sync-raise-a-hand__controller__switch > span {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sync-raise-a-hand__controller__switch > span::before {
+  content: "";
+  float: right;
+  display: inline-block;
+  margin: 5px 0 5px 10px;
+  border-radius: 7px;
+  width: 36px;
+  height: 14px;
+  background-color: #757575;
+  vertical-align: top;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.sync-raise-a-hand__controller__switch > span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.sync-raise-a-hand__controller__switch > input:checked {
+  right: -10px;
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.sync-raise-a-hand__controller__switch > input:checked + span::before {
+  background-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 0.6);
+}
+
+.sync-raise-a-hand__controller__switch > input:checked + span::after {
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  transform: translateX(16px);
+}
+
+.sync-raise-a-hand__controller__switch:hover > input {
+  opacity: 0.04;
+}
+
+.sync-raise-a-hand__controller__switch > input:focus {
+  opacity: 0.12;
+}
+
+.sync-raise-a-hand__controller__switch:hover > input:focus {
+  opacity: 0.16;
+}
+
+.sync-raise-a-hand__controller__switch > input:active {
+  opacity: 1;
+  transform: scale(0);
+  transition: transform 0s, opacity 0s;
+}
+
+.sync-raise-a-hand__controller__switch > input:active + span::before {
+  background-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 0.6);
+}
+
+.sync-raise-a-hand__controller__switch > input:checked:active + span::before {
+  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
 }
