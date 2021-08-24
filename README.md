@@ -10,7 +10,10 @@ Powerd by [Handtrackjs](https://github.com/victordibia/handtrack.js/) and [vites
 
 ## Demo
 
-https://user-images.githubusercontent.com/11070996/130373307-91437e62-5845-4707-8551-bc3c02c7e717.mp4
+
+
+https://user-images.githubusercontent.com/11070996/130681280-9021b9ef-e38f-4682-b223-e9fb2943614e.mp4
+
 
 
 
