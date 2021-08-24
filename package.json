@@ -14,7 +14,8 @@
     "build:web": "vite build",
     "build:js": "esbuild src/contentScripts/index.ts --bundle --minify --outfile=extension/dist/contentScripts/index.global.js",
     "clear": "rimraf extension/dist extension/manifest.json",
-    "lint": "eslint '**/*.{json,ts,js,vue}'"
+    "lint": "eslint '**/*.{json,ts,js,vue}'",
+    "build:package": "npm run build && bestzip extension.zip extension/*"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.7.0",
@@ -27,6 +28,7 @@
     "@vitejs/plugin-vue": "^1.4.0",
     "@vue/compiler-sfc": "^3.2.4",
     "@vueuse/core": "^6.0.0",
+    "bestzip": "^2.2.0",
     "chokidar": "^3.5.2",
     "cross-env": "^7.0.3",
     "esbuild": "^0.12.22",
