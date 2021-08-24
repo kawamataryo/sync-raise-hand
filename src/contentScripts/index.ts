@@ -3,7 +3,7 @@ import { createController } from './src/createController'
 import { getRaiseHandButton } from '~/contentScripts/src/utils'
 
 const main = () => {
-  const checkTimer = setInterval(jsLoaded, 300)
+  const checkTimer = setInterval(jsLoaded, 100)
 
   function jsLoaded() {
     if (getRaiseHandButton()) {
