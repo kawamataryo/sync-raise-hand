@@ -1,15 +1,20 @@
 import { initialize, startTracking, stopTracking } from './handtrack'
 import { getCallEndButton } from '~/contentScripts/src/utils'
 
+const CONTROLLER_ELEMENT_ID = 'sync-raise-a-hand__controller'
+const SWITCH_ELEMENT_WRAPPER_ID = 'sync-raise-a-hand__controller__switch-wrapper'
+const INPUT_ELEMENT_ID = 'sync-raise-a-hand__controller__switch-input'
+const SWITCH_ELEMENT_ID = 'sync-raise-a-hand__controller__switch'
+
 const createElements = () => {
   document.body.insertAdjacentHTML('beforeend', `
-  <div id="sync-raise-a-hand__controller" draggable="true" clickable="true">
-    <div class="sync-raise-a-hand__controller__label">
+  <div id=${CONTROLLER_ELEMENT_ID} draggable="true">
+    <div>
       Sync raise a hand ✋
     </div>
-    <div class="sync-raise-a-hand__controller__switch-wrapper">
-      <label class="sync-raise-a-hand__controller__switch">
-        <input type="checkbox" id="sync-raise-a-hand__controller__switch-input" clickable="true">
+    <div id=${SWITCH_ELEMENT_WRAPPER_ID}>
+      <label id=${SWITCH_ELEMENT_ID}>
+        <input type="checkbox" id=${INPUT_ELEMENT_ID}>
         <span></span>
       </label>
     </div>
@@ -18,7 +23,7 @@ const createElements = () => {
 }
 
 const setCheckedEvent = () => {
-  const controllerInput = document.querySelector<HTMLInputElement>('#sync-raise-a-hand__controller__switch-input')
+  const controllerInput = document.querySelector<HTMLInputElement>(`#${INPUT_ELEMENT_ID}`)
   if (controllerInput) {
     controllerInput.addEventListener('change', async(event) => {
       if ((event as any).target.checked)
@@ -30,18 +35,18 @@ const setCheckedEvent = () => {
 }
 
 const setDragEvent = () => {
-  const controllerWrapperEl = document.querySelector<HTMLDivElement>('#sync-raise-a-hand__controller')
+  const controllerWrapperEl = document.querySelector<HTMLDivElement>(`#${CONTROLLER_ELEMENT_ID}`)
   if (controllerWrapperEl) {
     controllerWrapperEl.ondragstart = () => {
       return false
     }
 
-    const moveAt = (pageX: any, pageY: any) => {
+    const moveAt = (pageX: number, pageY: number) => {
       controllerWrapperEl!.style.left = `${pageX - controllerWrapperEl!.offsetWidth / 2}px`
       controllerWrapperEl!.style.top = `${pageY - controllerWrapperEl!.offsetHeight / 2}px`
     }
 
-    const onMouseMove = (event: any) => {
+    const onMouseMove = (event: MouseEvent) => {
       moveAt(event.pageX, event.pageY)
     }
 
@@ -57,13 +62,13 @@ const setDragEvent = () => {
     }
   }
 
-  const inputWrapperEl = document.querySelector<HTMLDivElement>('.sync-raise-a-hand__controller__switch-wrapper')
+  const inputWrapperEl = document.querySelector<HTMLDivElement>(`#${SWITCH_ELEMENT_WRAPPER_ID}`)
   if (inputWrapperEl) {
-    inputWrapperEl.onmousedown = (event: any) => {
+    inputWrapperEl.onmousedown = (event: Event) => {
       event.stopPropagation()
       event.preventDefault()
     }
-    inputWrapperEl.ondragstart = (event: any) => {
+    inputWrapperEl.ondragstart = (event: Event) => {
       event.stopPropagation()
       event.preventDefault()
     }
@@ -74,7 +79,7 @@ const setHideControllerEvent = () => {
   const callEndButtonEl = getCallEndButton()
   if (callEndButtonEl) {
     callEndButtonEl.addEventListener('click', () => {
-      document.querySelector('#sync-raise-a-hand__controller')?.setAttribute('style', 'display: none')
+      document.querySelector(`#${CONTROLLER_ELEMENT_ID}`)?.setAttribute('style', 'display: none')
     })
   }
 }

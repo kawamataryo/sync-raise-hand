@@ -5,8 +5,7 @@ import { isDev, port, r } from '../scripts/utils'
 
 export async function getManifest(): Promise<Manifest.WebExtensionManifest> {
   const pkg: typeof PkgType = await fs.readJSON(r('package.json'))
-  // update this file to update this manifest.json
-  // can also be conditional based on your need
+
   return {
     manifest_version: 2,
     name: pkg.displayName || pkg.name,

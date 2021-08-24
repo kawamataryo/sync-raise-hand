@@ -16,8 +16,8 @@ const OPTIONS = {
   modelSize: 'large',
 }
 
-const raiseButtonRaisedClass = 'raise-hand-button--raised'
-const raiseButtonClass = 'raise-hand-button'
+const RAISE_BUTTON_RAISED_CLASS = 'raise-hand-button--raised'
+const RAISE_BUTTON_CLASS = 'raise-hand-button'
 
 export const initialize = async() => {
   model = await handTrack.load(OPTIONS)
@@ -26,19 +26,19 @@ export const initialize = async() => {
 
 const toggleRiseHandButton = (predictions: { label: string }[]) => {
   const raiseHandButton = getRaiseHandButton()
-  raiseHandButton?.closest('span')?.classList.add(raiseButtonClass)
+  raiseHandButton?.closest('span')?.classList.add(RAISE_BUTTON_CLASS)
 
   if (predictions.some((p: any) => p.label === 'open')) {
     if (!isRaiseHand) {
       isRaiseHand = true
-      raiseHandButton?.closest('span')?.classList.add(raiseButtonRaisedClass)
+      raiseHandButton?.closest('span')?.classList.add(RAISE_BUTTON_RAISED_CLASS)
       raiseHandButton?.click()
     }
   }
   else {
     if (isRaiseHand) {
       isRaiseHand = false
-      raiseHandButton?.closest('span')?.classList.remove(raiseButtonRaisedClass)
+      raiseHandButton?.closest('span')?.classList.remove(RAISE_BUTTON_RAISED_CLASS)
       raiseHandButton?.click()
     }
   }
