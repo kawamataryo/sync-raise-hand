@@ -19,7 +19,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "handtrackjs": "^0.1.5"
+    "handtrackjs": "^0.1.5",
+    "i18next": "^20.4.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.7.0",
@@ -82,25 +83,28 @@
   "release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
-      ["@semantic-release/release-notes-generator", {
-        "preset": "angular",
-        "presetConfig": {
-          "types": [
-            {
-              "type": "chore",
-              "section": "Chore"
-            },
-            {
-              "type": "refactor",
-              "section": "Refactor"
-            },
-            {
-              "type": "perf",
-              "section": "Performance"
-            }
-          ]
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "angular",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "chore",
+                "section": "Chore"
+              },
+              {
+                "type": "refactor",
+                "section": "Refactor"
+              },
+              {
+                "type": "perf",
+                "section": "Performance"
+              }
+            ]
+          }
         }
-      }],
+      ],
       "@semantic-release/github"
     ],
     "branches": [

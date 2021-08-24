@@ -1,5 +1,7 @@
+import i18next from 'i18next'
 import { initialize, startTracking, stopTracking } from './handtrack'
 import { getCallEndButton } from '~/contentScripts/src/utils'
+import { initializeI18n } from '~/contentScripts/src/i18n'
 
 const CONTROLLER_ELEMENT_ID = 'sync-raise-a-hand__controller'
 const SWITCH_ELEMENT_WRAPPER_ID = 'sync-raise-a-hand__controller__switch-wrapper'
@@ -10,7 +12,7 @@ const createElements = () => {
   document.body.insertAdjacentHTML('beforeend', `
   <div id=${CONTROLLER_ELEMENT_ID} draggable="true">
     <div>
-      Sync raise a hand ✋
+      ${i18next.t('controllerMessage')} ✋
     </div>
     <div id=${SWITCH_ELEMENT_WRAPPER_ID}>
       <label id=${SWITCH_ELEMENT_ID}>
@@ -86,6 +88,7 @@ const setHideControllerEvent = () => {
 
 export const createController = async() => {
   await initialize()
+  await initializeI18n()
   createElements()
   setCheckedEvent()
   setDragEvent()
