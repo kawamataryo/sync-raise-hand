@@ -1,5 +1,6 @@
-![Screen Shot 2021-08-23 at 7 25 55](https://user-images.githubusercontent.com/11070996/130372011-bddc1455-b82b-4b9b-97fb-f64ef407e890.png)
+<img src="https://user-images.githubusercontent.com/11070996/130786978-6f0b821d-3da4-45b1-bae7-2b27644e2bc7.png" alt="Sync Raise hand">
 
+[Download in Chrome Web Store](https://chrome.google.com/webstore/detail/sync-raise-a-hand/pimhkdcdgmedijjnjeagagnnddgbcnkm?hl=ja&authuser=1)
 
 ## Feature
 
@@ -12,13 +13,10 @@ Powerd by [Handtrackjs](https://github.com/victordibia/handtrack.js/) and [vites
 
 
 
-https://user-images.githubusercontent.com/11070996/130681280-9021b9ef-e38f-4682-b223-e9fb2943614e.mp4
-
-
-
+https://user-images.githubusercontent.com/11070996/130861858-00b7bb2d-ab87-457b-ade6-2bc42f6c71f7.mp4
 
 
 ## Install
 
-[Download in Chrome Web Store](https://chrome.google.com/webstore/detail/sync-raise-a-hand/aacolcbidcmmhkilmmgfebmcghpkdngg?hl=ja&authuser=0)
+[Download in Chrome Web Store](https://chrome.google.com/webstore/detail/sync-raise-a-hand/pimhkdcdgmedijjnjeagagnnddgbcnkm?hl=ja&authuser=1)
 
