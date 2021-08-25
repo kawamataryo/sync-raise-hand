@@ -1,7 +1,7 @@
 <template>
   <main class="w-[140px] px-2 py-3 text-center text-gray-700">
     <div class="font-bold justify-center flex">
-      Sync raise a hand ✋
+      Sync raise hand ✋
     </div>
   </main>
 </template>

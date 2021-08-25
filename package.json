@@ -1,6 +1,6 @@
 {
-  "name": "sync-raise-a-hand",
-  "displayName": "Sync raise a hand",
+  "name": "sync-raise-hand",
+  "displayName": "Sync raise hand",
   "version": "0.0.1",
   "description": "This is a Chrome extension that allows you to control the Raise button with real hand movements",
   "private": true,
