@@ -3,11 +3,11 @@ import type { Manifest } from 'webextension-polyfill'
 import type PkgType from '../package.json'
 import { isDev, port, r } from '../scripts/utils'
 
-export async function getManifest(): Promise<Manifest.WebExtensionManifest> {
+export async function getManifest(): Promise<Manifest.WebExtensionManifest & { host_permissions: string[]}> {
   const pkg: typeof PkgType = await fs.readJSON(r('package.json'))
 
   return {
-    manifest_version: 2,
+    manifest_version: 3,
     name: pkg.displayName || pkg.name,
     version: pkg.version,
     description: pkg.description,
@@ -29,6 +29,7 @@ export async function getManifest(): Promise<Manifest.WebExtensionManifest> {
       128: './assets/icon.png',
     },
     permissions: [],
+    host_permissions: ['http://meet.google.com/*', 'https://meet.google.com/*'],
     // this is required on dev for Vite script to load
     content_security_policy: isDev
       ? `script-src \'self\' http://localhost:${port}; object-src \'self\'`
