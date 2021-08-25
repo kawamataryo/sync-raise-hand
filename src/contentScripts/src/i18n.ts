@@ -6,7 +6,7 @@ export const initializeI18n = async() => await i18next.init({
   resources: {
     en: {
       translation: {
-        controllerMessage: 'Sync raise hand',
+        controllerMessage: 'Sync Raise hand',
       },
     },
     ja: {
