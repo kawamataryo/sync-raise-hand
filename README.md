@@ -7,7 +7,7 @@
 - ✋ Your real raised hand will be synchronized with the action of the raise button in Google Meet.
 - 🔐 All processing is done within the browser. No image data will be sent to the any server.
 
-Powerd by [Handtrackjs](https://github.com/victordibia/handtrack.js/) and [vitesse-webext](https://github.com/antfu/vitesse-webext).
+Powerd by [handtrackjs](https://github.com/victordibia/handtrack.js/) and [vitesse-webext](https://github.com/antfu/vitesse-webext).
 
 ## 🎬 Demo
 
