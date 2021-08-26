@@ -11,7 +11,7 @@ export async function getManifest(): Promise<Manifest.WebExtensionManifest & { h
     name: pkg.displayName || pkg.name,
     version: pkg.version,
     description: pkg.description,
-    browser_action: {
+    action: {
       default_icon: './assets/icon-48.png',
       default_popup: './dist/popup/index.html',
     },
