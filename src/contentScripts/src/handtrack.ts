@@ -11,7 +11,7 @@ const OPTIONS = {
   outputStride: 16,
   imageScaleFactor: 1,
   iouThreshold: 0.2,
-  scoreThreshold: 0.9,
+  scoreThreshold: 0.8,
   modelType: 'ssd320fpnlite',
   modelSize: 'large',
 }
