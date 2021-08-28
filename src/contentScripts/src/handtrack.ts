@@ -19,16 +19,18 @@ const OPTIONS = {
 const RAISE_BUTTON_RAISED_CLASS = 'raise-hand-button--raised'
 const RAISE_BUTTON_CLASS = 'raise-hand-button'
 
+type Prediction = { label: string }
+
 export const initialize = async() => {
   model = await handTrack.load(OPTIONS)
   videoEl = document.createElement('video')
 }
 
-const toggleRiseHandButton = (predictions: { label: string }[]) => {
+const toggleRiseHandButton = (predictions: Prediction[]) => {
   const raiseHandButton = getRaiseHandButton()
   raiseHandButton?.closest('span')?.classList.add(RAISE_BUTTON_CLASS)
 
-  if (predictions.some((p: any) => p.label === 'open')) {
+  if (predictions.some((p: Prediction) => p.label === 'open')) {
     if (!isRaiseHand) {
       isRaiseHand = true
       raiseHandButton?.closest('span')?.classList.add(RAISE_BUTTON_RAISED_CLASS)
