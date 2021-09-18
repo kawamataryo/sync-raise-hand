@@ -17,6 +17,15 @@ https://user-images.githubusercontent.com/11070996/130861858-00b7bb2d-ab87-457b-
 
 [Download in Chrome Web Store](https://chrome.google.com/webstore/detail/sync-raise-a-hand/pimhkdcdgmedijjnjeagagnnddgbcnkm?hl=ja&authuser=1)
 
+## 🔫 Troubleshooting
+If Sync Raise Hand does not work for you, please check the following.
+
+- Do you have Snap Camera running?
+  - If Snap camera is running, no motion will be detected. Please stop Snap camera and then reload the page.
+- Does the Google Meet settings in Chrome allow the camera to be controlled from JavaScript?
+  - Since Sync Raise Hand uses a camera to detect raised hands, please make sure that JavaScript is available to control the camera.Check your camera settings at [chrome://settings/content#media-stream-mic](chrome://settings/content#media-stream-mic).(Related [#2](https://github.com/kawamataryo/sync-raise-hand/issues/2))
+
+
 ## 🖥 Contributing
 Contributions are welcome 🎉
 We accept contributions via Pull Requests.
